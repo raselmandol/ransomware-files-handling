@@ -1,0 +1,3 @@
+//for_monitoring a file or directory is not the exact way.
+//I made it a long ago (old version i'm not uploading) just for fun.
+//you can check the old ref in cppref
