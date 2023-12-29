@@ -16,6 +16,7 @@ int main(int argc, char* argv[]) {
     const std::string path = argv[1];
     std::cout << "monitoring changes to: " << path << std::endl;
 
+    //HANDLE dir
     HANDLE dir = CreateFile(
         path.c_str(),
         FILE_LIST_DIRECTORY,
@@ -35,6 +36,7 @@ int main(int argc, char* argv[]) {
     DWORD bytesReturned;
     FILE_NOTIFY_INFORMATION* fileInfo;
 
+    //directorychangesW--?:f
     while (true) {
         if (!ReadDirectoryChangesW(
             dir,
