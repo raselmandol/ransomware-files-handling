@@ -17,6 +17,7 @@ bool hasEncryptionIndicators(const std::string& filePath) {
 }
 
 int main() {
+    //filePath-->adjust
     std::string filePath = "example.txt";
     if (hasEncryptionIndicators(filePath)) {
         std::cout << "File may be encrypted.\n";
