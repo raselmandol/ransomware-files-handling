@@ -23,6 +23,7 @@ void search_directory(fs::path directory) {
             search_directory(entry);
         } else {
             string filename = entry.path().filename().string();
+            //checking ext, if yes, entry path
             if (is_ransomware_extension(filename)) {
                 cout << "Encrypted file: " << entry.path() << endl;
             }
