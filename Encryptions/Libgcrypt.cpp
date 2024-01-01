@@ -9,7 +9,7 @@ void encryptFile(const std::string& inputFilePath, const std::string& outputFile
     const int ivSize = 16; 
     unsigned char iv[ivSize];
     gcry_randomize(iv, ivSize, GCRY_STRONG_RANDOM);
-
+//key size
     const int keySize = 32; 
     unsigned char key[keySize];
     gcry_kdf_derive(password.c_str(), password.size(), GCRY_KDF_PBKDF2, GCRY_MD_SHA256, nullptr, 0, 4096, keySize, key);
@@ -37,6 +37,7 @@ void encryptFile(const std::string& inputFilePath, const std::string& outputFile
         gcry_cipher_encrypt(cipherHandle, buffer, bytesRead, nullptr, 0);
         outputFile.write(reinterpret_cast<const char*>(buffer), bytesRead);
     }
+    //close ops
     gcry_cipher_close(cipherHandle);
     inputFile.close();
     outputFile.close();
