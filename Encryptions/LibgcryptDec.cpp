@@ -28,6 +28,7 @@ void decryptFile(const std::string& inputFilePath, const std::string& outputFile
     gcry_cipher_open(&cipherHandle, GCRY_CIPHER_AES256, GCRY_CIPHER_MODE_GCM, 0);
     gcry_cipher_setkey(cipherHandle, key, keySize);
     gcry_cipher_setiv(cipherHandle, iv, ivSize);
+    //buffer
     const int bufferSize = 4096;
     unsigned char buffer[bufferSize];
     while (inputFile.read(reinterpret_cast<char*>(buffer), bufferSize)) {
@@ -37,6 +38,7 @@ void decryptFile(const std::string& inputFilePath, const std::string& outputFile
     }
 
     gcry_cipher_close(cipherHandle);
+    //close file
     inputFile.close();
     outputFile.close();
 
