@@ -7,11 +7,13 @@ void encryptFile(const std::string& inputFilePath, const std::string& outputFile
         std::cerr << "Error: Libsodium initialization failed." << std::endl;
         return;
     }
+    //nonce
     unsigned char nonce[crypto_secretbox_NONCEBYTES];
     randombytes(nonce, sizeof nonce);
     unsigned char key[crypto_secretbox_KEYBYTES];
     crypto_secretbox_keygen(key);
 
+    //input file
     std::ifstream inputFile(inputFilePath, std::ios::binary);
     if (!inputFile) {
         std::cerr << "Error: Failed to open the input file." << std::endl;
@@ -32,6 +34,7 @@ void encryptFile(const std::string& inputFilePath, const std::string& outputFile
         crypto_secretbox_easy(cipherText, reinterpret_cast<const unsigned char*>(buffer), sizeof buffer, nonce, key);
         outputFile.write(reinterpret_cast<const char*>(cipherText), sizeof cipherText);
     }
+    //close file
     inputFile.close();
     outputFile.close();
 
