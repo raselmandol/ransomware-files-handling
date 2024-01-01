@@ -8,8 +8,10 @@
 int main() {
     using namespace CryptoPP;
     AutoSeededRandomPool prng;
+    //private key
     ECIES<ECP>::PrivateKey privateKey;
     privateKey.Initialize(prng, ASN1::secp256r1());
+    //public key
     ECIES<ECP>::PublicKey publicKey;
     privateKey.MakePublicKey(publicKey);
     std::string plaintext = "Hello, ECC!";
