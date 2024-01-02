@@ -2,6 +2,7 @@
 #include <fstream>
 #include <openssl/evp.h>
 bool decryptFile(const std::string& inputFilePath, const std::string& outputFilePath, const std::string& password) {
+   //openSSL algos
     OpenSSL_add_all_algorithms();
     ERR_load_crypto_strings();
     std::ifstream inputFile(inputFilePath, std::ios::binary);
