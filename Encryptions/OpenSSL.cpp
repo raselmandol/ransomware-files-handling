@@ -5,6 +5,7 @@
 bool encryptFile(const std::string& inputFilePath, const std::string& outputFilePath, const std::string& password) {
     OpenSSL_add_all_algorithms();
     ERR_load_crypto_strings();
+    //input file
     std::ifstream inputFile(inputFilePath, std::ios::binary);
     if (!inputFile) {
         std::cerr << "Error: Failed to open the input file." << std::endl;
