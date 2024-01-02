@@ -61,6 +61,7 @@ void encryptFile(const std::string& inputFilePath, const std::string& outputFile
         EVP_CIPHER_CTX_free(ctx);
         return;
     }
+    //buffer, cipher checks, close files
     outputFile.write(reinterpret_cast<const char*>(buffer), cipherTextLength);
     EVP_CIPHER_CTX_free(ctx);
     inputFile.close();
