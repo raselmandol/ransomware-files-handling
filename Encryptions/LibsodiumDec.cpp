@@ -3,6 +3,7 @@
 #include <sodium.h>
 
 void decryptFile(const std::string& inputFilePath, const std::string& outputFilePath, const std::string& password) {
+    //checking initialization 
     if (sodium_init() < 0) {
         std::cerr << "Error: Libsodium initialization failed." << std::endl;
         return;
@@ -22,6 +23,7 @@ void decryptFile(const std::string& inputFilePath, const std::string& outputFile
         std::cerr << "Error: Failed to create the output file." << std::endl;
         return;
     }
+    //buffer
     char buffer[4096];
     while (inputFile.read(buffer, sizeof buffer)) {
         unsigned char plainText[sizeof buffer - crypto_secretbox_MACBYTES];
