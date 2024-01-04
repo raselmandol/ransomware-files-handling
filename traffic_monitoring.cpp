@@ -27,6 +27,7 @@ int main() {
 
     //setting up a filter to capture only the traffic we are interested in
     struct bpf_program fp;
+    //80?443
     char filter_exp[] = "tcp port 80 or tcp port 443";
     if (pcap_compile(handle, &fp, filter_exp, 0, PCAP_NETMASK_UNKNOWN) == -1) {
         fprintf(stderr, "Could not parse filter: %s\n", pcap_geterr(handle));
