@@ -14,7 +14,7 @@ int main() {
         return 1;
     }
 
-    //give the control panel applet some time to open
+    //give the control panel some time to open
     Sleep(2000);
 
     //use the Windows API to search for the uninstallation window and close it
