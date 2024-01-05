@@ -10,6 +10,7 @@ std::vector<std::string> ransomwareExtensions = {
     ".crypt",
     ".cerber",
 };
+//add more extensions
 
 void scanForRansomware(const std::string& path) {
     for (const auto& entry : fs::recursive_directory_iterator(path)) {
