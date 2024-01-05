@@ -26,7 +26,8 @@ void scanForRansomware(const std::string& path) {
 }
 
 int main() {
-   
+
+     //replace "C:\\" with the root directory you want to scan
     std::string rootPath = "C:\\";
     
     try {
