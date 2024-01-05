@@ -18,6 +18,7 @@ void scanForRansomware(const std::string& path) {
             for (const auto& ext : ransomwareExtensions) {
                 if (entry.path().extension() == ext) {
                     std::cout << "Potential ransomware file found: " << entry.path() << std::endl;
+                    //do whatever you want
                    
                 }
             }
