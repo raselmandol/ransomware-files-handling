@@ -38,6 +38,7 @@ bool isFileEncryptedByEntropy(const std::string& filePath) {
 
 int main() {
     std::string filePath = "example.txt";
+    //encrypted by entropy?
     if (isFileEncryptedByEntropy(filePath)) {
         std::cout << "File appears to be encrypted based on entropy analysis.\n";
     } else {
