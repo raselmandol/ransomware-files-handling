@@ -4,6 +4,7 @@
 void sendEmailAlert(const std::string& message) {
     //sending an email alert goes here
   //add your own configs and codes here
+//add mail, smtp
     std::cout << "Email alert sent: " << message << std::endl;
 }
 
