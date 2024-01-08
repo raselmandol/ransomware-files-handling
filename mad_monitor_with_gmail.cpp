@@ -69,6 +69,7 @@ int main()
         //if the file count has changed,sending an email alert
         if (currentCount != fileCount)
         {
+            //sendEmail
             string body = "The directory '" + dirPath + "' has been modified.";
             sendEmail(body);
 
