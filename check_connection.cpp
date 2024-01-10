@@ -11,6 +11,7 @@ int main()
         return 1;
     }
 
+    //buffer-->set
     char buffer[256];
     while (!feof(pipe)) {
         if (fgets(buffer, 256, pipe) != NULL) {
