@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include <TlHelp32.h>
 
+//listing background tasks
 void ListBackgroundTasks() {
     SC_HANDLE scmHandle = OpenSCManager(nullptr, nullptr, SC_MANAGER_ENUMERATE_SERVICE);
     if (!scmHandle) {
