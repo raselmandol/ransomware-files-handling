@@ -17,6 +17,7 @@ bool isFileEncryptedWithAES(const std::string& filePath) {
 }
 
 int main() {
+    //filePath-->set here
     std::string filePath = "example.txt";
     if (isFileEncryptedWithAES(filePath)) {
         std::cout << "File is encrypted with AES.\n";
