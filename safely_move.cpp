@@ -7,6 +7,7 @@ namespace fs = std::filesystem;
 
 //checking if a file has a ransomware extension
 //you can add more extensions here
+//extensions-->update
 bool isRansomware(const std::string& fileName) {
     static const std::vector<std::string> extensions = {
         ".locky", ".crypt", ".cryptolocker", ".zepto", ".odin", ".osiris", ".cerber",
@@ -34,6 +35,7 @@ int main() {
     std::string sourceFolder = "C:/"; //replace with your desired source folder/drive
     std::string destFolder = "C:/encrypted_files/"; //replace with your desired destination folder
 
+    //source folder checking
     for (const auto& entry : fs::recursive_directory_iterator(sourceFolder)) {
         if (fs::is_regular_file(entry) && isRansomware(entry.path().extension().string())) {
             //moving file to destination folder
