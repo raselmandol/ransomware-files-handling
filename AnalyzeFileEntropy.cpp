@@ -1,3 +1,4 @@
+//calculate entrop and frequency 
 #include <iostream>
 #include <fstream>
 #include <vector>
