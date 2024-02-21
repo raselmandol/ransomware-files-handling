@@ -5,6 +5,7 @@
 
 int main()
 {
+  //running netstat -anob setting command
     FILE* pipe = _popen("netstat -anob", "r"); //opening a pipe to run the command
     if (!pipe) {
         printf("command execution failed!\n");
