@@ -35,7 +35,7 @@ bool encryptFile(const std::string& inputFilePath, const std::string& outputFile
     return true;
 }
 int main() {
-    std::string inputFilePath = "input.txt";  //Replace with the path to your input file
+    std::string inputFilePath = "input.txt";  //input file
     std::string outputFilePath = "output.enc";  //Replace with the desired path for the encrypted output file
     std::string password = "your_secret_password"; //Replace with your desired password
 
