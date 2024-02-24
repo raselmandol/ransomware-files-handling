@@ -27,6 +27,7 @@ int main() {
                  new PK_DecryptorFilter(prng, decryptor,
                                         new StringSink(decryptedText)));
     std::cout << "Plaintext: " << plaintext << std::endl;
+    //printing ciphertext
     std::cout << "Ciphertext: " << ciphertext << std::endl;
     std::cout << "Decrypted Text: " << decryptedText << std::endl;
 
