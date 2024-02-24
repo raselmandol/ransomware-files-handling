@@ -35,8 +35,10 @@ bool decryptFile(const std::string& inputFilePath, const std::string& outputFile
 }
 
 int main() {
+    //input_file path
     std::string inputFilePath = "output.enc";
     std::string outputFilePath = "decrypted.txt";
+    //set pass here
     std::string password = "my_secret_password"; 
 
     if (decryptFile(inputFilePath, outputFilePath, password)) {
