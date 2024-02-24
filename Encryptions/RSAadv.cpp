@@ -25,6 +25,7 @@ private:
 
 class RSAEncryption {
 public:
+//passing_key
     RSAEncryption(RSA *key) : rsa(key) {}
 
     std::vector<unsigned char> encrypt(const std::vector<unsigned char> &data) {
