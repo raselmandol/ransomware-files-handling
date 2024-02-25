@@ -3,6 +3,7 @@
 
 int main() {
     try {
+        //set_strings
         const char *keyStr1 = "Rasel";
         const char *keyStr2 = "Mandol";
         const char *keyStr3 = "Nothing";
