@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <openssl/aes.h>
+#include <openssl/aes.h> //aes support
 
 void encryptAES(const std::string& inputFile, const std::string& outputFile, const std::string& key) {
     std::ifstream in(inputFile, std::ios::binary);
@@ -12,6 +12,7 @@ void encryptAES(const std::string& inputFile, const std::string& outputFile, con
     AES_set_encrypt_key(reinterpret_cast<const unsigned char*>(key.c_str()), key.size() * 8, &aesKey);
 
     const int blockSize = AES_BLOCK_SIZE;
+    //set_input and output
     unsigned char input[blockSize];
     unsigned char output[blockSize];
 
