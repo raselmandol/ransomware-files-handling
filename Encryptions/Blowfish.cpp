@@ -15,6 +15,7 @@ void decryptBlowfish(const unsigned char *ciphertext, int ciphertextLength, cons
 }
 
 int main() {
+    //set_key, text
     const unsigned char key[] = "mySecretKey";
     const unsigned char plaintext[] = "Hello, Blowfish!";
     unsigned char ciphertext[sizeof(plaintext)];
