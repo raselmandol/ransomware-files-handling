@@ -8,6 +8,7 @@ int main() {
     try {
         const std::string key = "mySecretAESKey1234";
         const std::string iv = "initializationVect";
+        //set_plaintext
         const std::string plaintext = "Hello, AES!";
         byte keyBytes[CryptoPP::AES::DEFAULT_KEYLENGTH];
         std::memcpy(keyBytes, key.c_str(), CryptoPP::AES::DEFAULT_KEYLENGTH);
