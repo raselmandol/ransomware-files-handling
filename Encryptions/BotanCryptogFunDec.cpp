@@ -29,6 +29,7 @@ bool decryptFile(const std::string& inputFilePath, const std::string& outputFile
         cipher->update(reinterpret_cast<uint8_t*>(buffer), bytesRead, reinterpret_cast<uint8_t*>(buffer));
         outputFile.write(buffer, bytesRead);
     }
+    //finish_cipher
     cipher->finish(buffer, 0);
     outputFile.write(buffer, cipher->output_length(0));
     inputFile.close();
@@ -39,6 +40,7 @@ bool decryptFile(const std::string& inputFilePath, const std::string& outputFile
 }
 
 int main() {
+    //input_file
     std::string inputFilePath = "output.enc"; 
     std::string outputFilePath = "decrypted.txt";
     std::string password = "my_secret_password";
