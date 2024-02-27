@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <botan/botan.h>
+#include <botan/botan.h>//use botan_support
 #include <botan/aes.h>
 #include <botan/cipher_mode.h>
 #include <botan/filters.h>
