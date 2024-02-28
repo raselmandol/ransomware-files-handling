@@ -21,6 +21,7 @@ bool decryptFile(const std::string& inputFilePath, const std::string& outputFile
     inputFile.read(reinterpret_cast<char*>(iv), EVP_MAX_IV_LENGTH);
     EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
     EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, reinterpret_cast<const unsigned char*>(password.c_str()), iv);
+   //set_buffer_size
     const int bufferSize = 4096;
     unsigned char buffer[bufferSize];
     int bytesRead, plainTextLength;
