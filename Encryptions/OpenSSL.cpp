@@ -22,6 +22,7 @@ bool encryptFile(const std::string& inputFilePath, const std::string& outputFile
         return false;
     }
     outputFile.write(reinterpret_cast<const char*>(iv), EVP_MAX_IV_LENGTH);
+    //cipher_text_bl;
     EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
     EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, reinterpret_cast<const unsigned char*>(password.c_str()), iv);
     const int bufferSize = 4096;
