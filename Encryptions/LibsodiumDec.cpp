@@ -15,6 +15,7 @@ void decryptFile(const std::string& inputFilePath, const std::string& outputFile
         std::cerr << "Error: Failed to read nonce from input file." << std::endl;
         return;
     }
+    //key_in
     unsigned char key[crypto_secretbox_KEYBYTES];
     crypto_secretbox_keygen(key);
 
