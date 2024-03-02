@@ -11,6 +11,7 @@ void handleErrors()
 }
 int main()
 {
+    //public_key?
     const char *publicKeyFile = "public_key.pem";
     FILE *pubKeyFile = fopen(publicKeyFile, "rb");
     if (!pubKeyFile)
