@@ -10,7 +10,7 @@ void handleErrors() {
     throw std::runtime_error("OpenSSL error");
 }
 void encryptFile(const std::string& inputFilePath, const std::string& outputFilePath, const std::string& password) {
-    // Initialize OpenSSL library
+    //Initialize OpenSSL library
     OpenSSL_add_all_algorithms();
     ERR_load_crypto_strings();
     unsigned char iv[EVP_MAX_IV_LENGTH];
@@ -70,6 +70,7 @@ void encryptFile(const std::string& inputFilePath, const std::string& outputFile
 }
 
 int main() {
+    //set_inputPath,OutputPath,Password
     std::string inputFilePath = "input.txt"; 
     std::string outputFilePath = "output.enc"; 
     std::string password = "my_secret_password"; 
