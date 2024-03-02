@@ -77,6 +77,7 @@ int main()
     }
     EVP_OpenFinal(ctx, outBuf, &outLen);
     fwrite(outBuf, 1, outLen, decryptedFile);
+    //encryptedfile_close_handle()
     fclose(encryptedFile);
     fclose(decryptedFile);
     EVP_PKEY_free(evpKey);
