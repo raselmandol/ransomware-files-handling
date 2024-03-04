@@ -56,6 +56,7 @@ int main(int argc, char* argv[]) {
         fileInfo = reinterpret_cast<FILE_NOTIFY_INFORMATION*>(buffer);
 
         while (true) {
+            //filename_fileInfo
             std::wstring fileName(fileInfo->FileName, fileInfo->FileNameLength / sizeof(WCHAR));
 
             if (fileName == L"" || fileName == L"." || fileName == L"..") {
