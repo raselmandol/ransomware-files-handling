@@ -5,6 +5,7 @@
 
 namespace fs = std::filesystem;
 
+//add_more_extensions
 std::vector<std::string> ransomwareExtensions = {
     ".locky",
     ".crypt",
