@@ -20,6 +20,7 @@ bool is_ransomware_extension(string filename) {
 void search_directory(fs::path directory) {
     for (auto& entry : fs::directory_iterator(directory)) {
         if (fs::is_directory(entry)) {
+            //search_directory
             search_directory(entry);
         } else {
             string filename = entry.path().filename().string();
@@ -50,6 +51,7 @@ int main(int argc, char** argv) {
         search_directory(directory2);
     }
     fs::path directory3(argv[3]);
+    //check_directory
     if (!fs::is_directory(directory3)) {
         cout << "Error: " << argv[3] << " is not a directory." << endl;
     } else {
