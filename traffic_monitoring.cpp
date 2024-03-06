@@ -18,7 +18,7 @@ int main() {
     pcap_t *handle;
 
     //opening the network interface for capturing packets
-    //eth0
+    //eth0, you can change here
     handle = pcap_open_live("eth0", BUFSIZ, 1, 1000, error_buffer);
     if (handle == NULL) {
         fprintf(stderr, "Could not open device: %s\n", error_buffer);
