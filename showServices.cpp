@@ -6,7 +6,7 @@
 void ListBackgroundTasks() {
     SC_HANDLE scmHandle = OpenSCManager(nullptr, nullptr, SC_MANAGER_ENUMERATE_SERVICE);
     if (!scmHandle) {
-        std::cerr << "Failed to open the services control manager. Error: " << GetLastError() << std::endl;
+        std::cout<<"Failed to open the services control manager. Error: " << GetLastError() << std::endl;
         return;
     }
   
@@ -26,7 +26,7 @@ void ListBackgroundTasks() {
     );
 
     if (GetLastError() != ERROR_MORE_DATA) {
-        std::cerr << "Failed to get service information. Error: " << GetLastError() << std::endl;
+        std::cout<<"Failed to get service information. Error: " << GetLastError() << std::endl;
         CloseServiceHandle(scmHandle);
         return;
     }
@@ -50,7 +50,7 @@ void ListBackgroundTasks() {
         nullptr,
         nullptr
     )) {
-        std::cerr << "Failed to enumerate services. Error: " << GetLastError() << std::endl;
+        std::cout<<"Failed to enumerate services. Error: " << GetLastError() << std::endl;
         LocalFree(servicesBuffer);
         CloseServiceHandle(scmHandle);
         return;
