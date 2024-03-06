@@ -40,6 +40,7 @@ int main() {
         if (fs::is_regular_file(entry) && isRansomware(entry.path().extension().string())) {
             //moving file to destination folder
             std::string destFilePath = destFolder + entry.path().filename().string();
+            //rename? :: destFilePath
             fs::rename(entry, destFilePath);
             std::cout << "Moved " << entry.path() << " to " << destFilePath << std::endl;
         }
