@@ -30,6 +30,7 @@ void sendEmail(const string& body)
         //creating a new mail message
         MailMessage message;
         message.setSender(from);
+        //addRecipient
         message.addRecipient(MailRecipient(MailRecipient::PRIMARY_RECIPIENT, to));
         message.setSubject(subject);
         message.setContentType("text/plain");
