@@ -10,7 +10,7 @@ int main() {
 
     //check if the ShellExecuteW function succeeded or failed
     if (result <= 32) {
-        std::cerr << "failed to execute the control panel applet (appwiz.cpl)." << std::endl;
+        std::cout<< "failed to execute the control panel applet (appwiz.cpl)." << std::endl;
         return 1;
     }
 
