@@ -6,6 +6,7 @@
 
 int main() {
     try {
+        //set key
         const std::string key = "mySecretKey";
         const std::string plaintext = "Hello, Twofish!";
         byte keyBytes[CryptoPP::Twofish::DEFAULT_KEYLENGTH];
