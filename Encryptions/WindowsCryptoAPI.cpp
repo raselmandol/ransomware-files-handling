@@ -5,6 +5,7 @@
 
 void encryptFile(const std::string& inputFilePath, const std::string& outputFilePath, const std::string& password) {
     std::ifstream inputFile(inputFilePath, std::ios::binary);
+    //check_error
     if (!inputFile) {
         std::cerr << "Error: Failed to open the input file." << std::endl;
         return;
