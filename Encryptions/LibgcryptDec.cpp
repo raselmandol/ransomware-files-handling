@@ -46,6 +46,7 @@ void decryptFile(const std::string& inputFilePath, const std::string& outputFile
 }
 
 int main() {
+    //set inputPath, password
     std::string inputFilePath = "output.enc"; 
     std::string outputFilePath = "decrypted.txt";
     std::string password = "my_secret_password";
