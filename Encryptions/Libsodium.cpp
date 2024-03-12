@@ -42,6 +42,7 @@ void encryptFile(const std::string& inputFilePath, const std::string& outputFile
 }
 
 int main() {
+    //set Input_path and password
     std::string inputFilePath = "input.txt";   
     std::string outputFilePath = "output.enc";
     std::string password = "my_secret_password";
